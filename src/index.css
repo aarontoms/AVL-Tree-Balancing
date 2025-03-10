@@ -1,0 +1,22 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  body {
+    background-color: #1a202c; /* bg-gray-900 */
+    color: #ffffff; /* text-white */
+  }
+}
+
+/* Smooth animations for tree updates */
+canvas {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Node highlight animation */
+@keyframes nodeHighlight {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
