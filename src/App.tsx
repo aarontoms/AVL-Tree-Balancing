@@ -268,7 +268,7 @@ function App() {
       canvas.height = Math.max(500, document.body.clientHeight * 0.6);
     }
   }, [tree.root]);
-  
+
 
   const handleInsert = () => {
     const num = parseInt(value);
@@ -296,18 +296,18 @@ function App() {
         <h1 className="text-3xl font-bold text-center mb-8">AVL Tree Visualization</h1>
 
         <div className="flex flex-col md:flex-row gap-8">
-          <div className="w-full md:w-2/3">
+          <div className="w-full md:w-3/4">
             <div className="bg-gray-800 rounded-lg p-4 shadow-lg">
               <canvas
-              ref={canvasRef}
-              width={800}
-              height={500}
-              className="w-[90%] h-[500px] bg-gray-800"
+                ref={canvasRef}
+                width={800}
+                height={500}
+                className="w-[100%] h-[500px] bg-gray-800"
               />
             </div>
           </div>
 
-          <div className="w-full md:w-1/3 space-y-6">
+          <div className="w-full md:w-1/4 space-y-6">
             <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
               <h2 className="text-xl font-semibold mb-4">Controls</h2>
               <div className="space-y-4">
@@ -335,33 +335,33 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
-              <div className="flex items-center gap-2 mb-4">
-                <Info className="w-5 h-5 text-indigo-400" />
-                <h2 className="text-xl font-semibold">How it Works</h2>
-              </div>
-              <div className="space-y-3 text-gray-300 text-sm">
-                <p>
-                  An AVL tree is a self-balancing binary search tree where the height difference
-                  between left and right subtrees (balance factor) cannot exceed 1.
-                </p>
-                <p>
-                  The balance factor (BF) shown above each node is calculated as:
-                  <code className="block bg-gray-700 p-2 rounded mt-2 font-mono">
-                    BF = height(left subtree) - height(right subtree)
-                  </code>
-                </p>
-                <p>
-                  When |BF| {'>'} 1, the tree performs rotations to restore balance:
-                </p>
-                <ul className="list-disc list-inside space-y-2">
-                  <li>Left-Left Case (BF {'>'} 1): Right rotation</li>
-                  <li>Right-Right Case (BF {'<'} -1): Left rotation</li>
-                  <li>Left-Right Case: Left rotation + Right rotation</li>
-                  <li>Right-Left Case: Right rotation + Left rotation</li>
-                </ul>
-              </div>
-            </div>
+          </div>
+        </div>
+        <div className="bg-gray-800 rounded-lg p-6 shadow-lg mt-8">
+          <div className="flex items-center gap-2 mb-4">
+            <Info className="w-5 h-5 text-indigo-400" />
+            <h2 className="text-xl font-semibold">How it Works</h2>
+          </div>
+          <div className="space-y-3 text-gray-300 text-sm">
+            <p>
+              An AVL tree is a self-balancing binary search tree where the height difference
+              between left and right subtrees (balance factor) cannot exceed 1.
+            </p>
+            <p>
+              The balance factor (BF) shown above each node is calculated as:
+              <code className="block bg-gray-700 p-2 rounded mt-2 font-mono">
+                BF = height(left subtree) - height(right subtree)
+              </code>
+            </p>
+            <p>
+              When |BF| {'>'} 1, the tree performs rotations to restore balance:
+            </p>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Left-Left Case (BF {'>'} 1): Right rotation</li>
+              <li>Right-Right Case (BF {'<'} -1): Left rotation</li>
+              <li>Left-Right Case: Left rotation + Right rotation</li>
+              <li>Right-Left Case: Right rotation + Left rotation</li>
+            </ul>
           </div>
         </div>
       </div>
