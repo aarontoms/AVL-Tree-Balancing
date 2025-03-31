@@ -230,7 +230,7 @@ function App() {
     // Draw nodes and balance factors
     nodes.forEach(({ x, y, value, balanceFactor }) => {
       // Draw balance factor
-      ctx.fillStyle = '#9333ea';
+      ctx.fillStyle = '#64e579';
       ctx.font = '14px Inter, sans-serif';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';

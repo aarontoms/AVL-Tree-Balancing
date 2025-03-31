@@ -4,12 +4,11 @@
 
 @layer base {
   body {
-    background-color: #1a202c; /* bg-gray-900 */
-    color: #ffffff; /* text-white */
+    background-color: #1a202c;
+    color: #ffffff;
   }
 }
 
-/* Smooth animations for tree updates */
 canvas {
   transition: all 0.3s ease-in-out;
 }
