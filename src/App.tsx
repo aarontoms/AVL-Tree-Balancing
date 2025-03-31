@@ -315,6 +315,7 @@ function App() {
                   type="number"
                   value={value}
                   onChange={(e) => setValue(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && handleInsert()}
                   className="w-full px-4 py-2 bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                   placeholder="Enter a number"
                 />
@@ -349,7 +350,8 @@ function App() {
             </p>
             <p>
               The balance factor (BF) shown above each node is calculated as:
-              <code className="block bg-gray-700 p-2 rounded mt-2 font-mono">
+              <br />
+              <code className="inline-block bg-gray-700 p-2 rounded mt-2 font-mono">
                 BF = height(left subtree) - height(right subtree)
               </code>
             </p>
